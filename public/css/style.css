@@ -1,0 +1,222 @@
+/*! GLOBAL */
+:root{
+    --sizeButton : 3rem;
+    --colorVert : #38BC91;
+    --colorOrange : #FE9A00;
+    --colorJaune : #E7DFB0;
+    --colorJauneUp : rgb(231,223,176, 0.6)}
+
+*{
+    top:0;
+    left:0;
+    margin:0;
+    padding:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display:flex; 
+    flex-direction: row;}
+
+
+
+/*! HEADER */
+header{
+    width: 35vw;
+    height: 100vh;
+    background-color: var(--colorVert);
+    background-image: url("../img/logo.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+svg{
+    fill : "#FF0000"
+}
+
+.icon{
+    border : 0.1rem solid var(--colorOrange);
+    width : var(--sizeButton);
+    height : var(--sizeButton);
+    border-radius: calc(var(--sizeButton) / 2);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    background-color: #E7DFB0;
+    margin: 2rem;
+    box-shadow: 5px 6px 11px 5px rgba(0,0,0,0.36);}
+
+#iconHome{
+    background-image: url("../img/house-solid.svg");}
+#iconAddUser{
+    background-image: url("../img/user-plus-solid.svg");}
+#delete{
+    background-image: url("../img/trash-solid.svg");}
+#deleteHome{
+    position : absolute;
+    right: 0;
+    left : auto;
+    bottom: 0;;
+    top : auto;
+    background-image: url("../img/trash-solid.svg");}
+#allCheck{
+    background-image: url("../img/check-double-solid.svg");}
+#modify{
+    background-image: url("../img/pen-to-square-solid.svg");}
+#check{
+    background-image: url("../img/check-solid.svg");}
+#cancel{
+    background-image: url("../img/xmark-solid.svg");
+    background-size: 35%;}
+
+
+/*! MAIN */
+main{
+    width: 65vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;}
+
+
+.titleContainer{
+    background-color: var(--colorJaune);
+    width: 100%;
+    height: 20vh;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 5px 6px 11px 5px rgba(0,0,0,0.36);}
+
+.mainView{
+    background-color: var(--colorJauneUp);
+    width: 100%;
+    height: 80vh;
+    position : relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;}
+
+#home{
+    flex-direction: row;
+    flex-wrap: wrap;}
+
+.card{
+    position: relative;
+    width: 6rem;
+    height: 12rem;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    padding : 1rem;
+    background-color: rgba(255,255,255,0.5);
+    border : 0.1rem solid var(--colorOrange);
+    border-radius: 0.3rem;
+    box-shadow: 5px 6px 11px 5px rgba(0,0,0,0.36);}
+
+.card p {
+    text-align: center;
+    font-weight: bold;}
+
+.isBirthday{
+    position: absolute;
+    opacity: 20%;
+    width : 60%;
+    top: 27%;
+    left : 21%;
+}
+
+#triangle{
+    position: absolute;
+    height : 0;
+    width : 0;
+    border-top : 2rem solid var(--colorVert);
+    border-right : 2rem solid transparent;}
+
+#eye{
+    background-image: url("../img/eye-solid.svg");
+    margin : 0;
+    width : calc( var(--sizeButton) / 2 );
+    height : calc( var(--sizeButton) / 2 );
+    box-shadow: none;}
+
+
+/*! ADD USER FORM */
+
+.form{
+    flex-direction: column;
+    justify-content: center;}
+
+.form label{
+    width : 23rem;
+    margin : 0.2rem 0;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;}
+
+.smallIcon{
+    width: 2rem;
+    height : 2rem;
+    
+    border : 2px solid var(--colorVert);
+    border-radius: 2rem;
+    padding : 0.2rem;}
+
+.error{
+    margin-left: 4rem;
+    margin-bottom: 0.3rem;
+    color : red;
+    text-align: center;}
+
+.field{
+    height: 2rem;
+    width : 300px;
+    border-radius: 0.5rem;}
+
+.control{
+    width :100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;}
+
+.checkbox{
+    width:1.2rem;
+    height:1.2rem;}
+
+.button{
+    cursor : pointer;}
+
+.button:hover, .icon:hover{
+    filter: brightness(1.2);}
+
+.button:active, .icon:active{
+    transform-origin: bottom;
+    transform: scaleY(0.9);}
+
+.oneCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;}
+
+.information{
+    display : flex;
+    flex-direction: row;
+    height : 50px;
+    line-height: 50px;
+    margin-left: 40%;}
+
+.information p{
+    margin-left : 20px;}

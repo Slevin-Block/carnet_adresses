@@ -1,0 +1,28 @@
+<div class="titleContainer">
+    <h1 class="titre">Fiche contact</h1>
+</div>
+<div class="mainView oneCard">
+    <div class="information" id="identity">
+        <img class="smallIcon" src="./img/person-half-dress-solid.svg"/>
+        <p> <%= user.civility %> <%= user.firstname %> <%= user.lastname %></p>
+    </div>
+    <div class="information" id="phone">
+        <img class="smallIcon" src="./img/phone-solid.svg"/>
+        <p><%= user.phone %></p>
+    </div>
+    <div class="information" id="mail">
+        <img class="smallIcon" src="./img/envelope-solid.svg"/>
+        <p><%= user.mail %></p>
+    </div>
+    <div class="information" id="birthday">
+        <img class="smallIcon" src="./img/calendar-days-solid.svg"/>
+        <p><%= birthday %></p>
+    </div>
+    <div class="control">
+        <a class="icon" id="modify" href="/edit?id=<%= user.id %>"></a>
+        <a class="icon" id="delete" href="/delete?id=<%= user.id %>"></a>
+    </div>
+
+</div>
+
+

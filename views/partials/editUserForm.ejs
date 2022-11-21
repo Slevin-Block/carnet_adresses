@@ -1,0 +1,70 @@
+<div class="titleContainer">
+    <h1 class="titre">MODIFIER UN CONTACT</h1>
+</div>
+<form class="mainView form" method="POST">
+    <label for="id">
+        <input type="text" id="id" name="id" value="<%= user.id %>" hidden/>
+    </label>
+
+    <label for="civility">
+        <img class="smallIcon" src="./img/person-half-dress-solid.svg"/>
+        <select class="field" id="civility" name="civility"  value="">
+            <option value="Mr" 
+            <% if (user.civility === "Mr") { %>
+                selected
+            <% } %>
+            >Mr</option>
+            <option value="Mme"
+            <% if (user.civility === "Mme") { %>
+                selected
+            <% } %>
+            >Mme</option>
+        </select>
+    </label>
+
+    <label for="lastname">
+        <img class="smallIcon" src="./img/id-card-clip-solid.svg"/>
+        <input type="text" class="field" id="lastname" name="lastname" placeholder="Votre nom" value="<%= user.lastname %>"/>
+        <% if(error.lastname) { %>
+            <p class="error"><%= error.msg.lastname %></p>
+        <% } %>
+    </label>
+
+    <label for="firstname">
+        <img class="smallIcon" src="./img/id-card-clip-solid-01.svg"/>
+        <input type="text" class="field" id="firstname" name="firstname" placeholder="Votre prénom" value="<%= user.firstname %>"/>
+        <% if(error.fistname) { %>
+            <p class="error"><%= error.msg.firstname %></p>
+        <% } %>
+    </label>
+    
+    <label for="phone">
+        <img class="smallIcon" src="./img/phone-solid.svg"/>
+        <input type="tel" class="field" id="phone" name="phone" placeholder="Votre numéro de téléphone" value="<%= user.phone %>"/>
+        <% if(error.phone) { %>
+            <p class="error"><%= error.msg.phone %></p>
+        <% } %>
+    </label>
+
+    <label for="mail">
+        <img class="smallIcon" src="./img/envelope-solid.svg"/>
+        <input type="mail" class="field" id="mail" name="mail" placeholder="Votre email" value="<%= user.mail %>"/>
+        <% if(error.mail) { %>
+            <p class="error"><%= error.msg.mail %></p>
+        <% } %>
+    </label>
+
+    <label for="birthday">
+        <img class="smallIcon" src="./img/calendar-days-solid.svg"/>
+        <input class="field" type="date" id="birthday" name="birthday" placeholder="Votre date de naissance" value="<%= user.birthday %>"/>
+        <% if(error.birthday) { %>
+            <p class="error"><%= error.msg.birthday %></p>
+        <% } %>
+    </label>
+    
+    <div class="control">
+        <button class="icon" id="check"></button>
+        <a class="icon" id="cancel"  href="/"></a>
+    </div>
+</form>
+

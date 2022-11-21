@@ -1,0 +1,21 @@
+<div class="titleContainer">
+    <h1 class="titre">Liste des contacts</h1>
+</div>
+<form class="mainView" id="home" method="post">
+    <% for (let user of users){ %>
+        <div class="card">
+            <% if (user.isBirthday){ %>
+                <img class="isBirthday" src="./img/cake-candles-solid.svg">
+            <% } %>
+            <div id="triangle"></div>
+            <input type="checkbox" class="checkbox" id="<%= user.id %>" name="<%= user.id %>"
+            <% if (allCheck){ %>
+                checked
+            <% } %> >
+            <p> <%= user.civility %> <%= user.firstname %> <%= user.lastname %></p>
+            <a class="icon" id="eye" href="/user?id=<%= user.id %>"></a>
+        </div>
+    <% } %>
+    <!-- <a class="icon" id="allCheck" href="/allckeck"></a> -->
+    <button class="icon" id="deleteHome"></button>
+</form>
